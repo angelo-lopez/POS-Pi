@@ -1,0 +1,162 @@
+package pospi;
+import javax.swing.JFrame;
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.JPanel;
+import javax.swing.UIManager;
+import javax.swing.JTable;
+import javax.swing.LayoutStyle.ComponentPlacement;
+import java.awt.FlowLayout;
+import javax.swing.JButton;
+import javax.swing.JScrollPane;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
+/**
+ * Author: Angelo Romel Lopez
+ * <br>Description: Constructs and initializes the components and graphical user interface
+ * of the user product view screen.
+ * */
+
+public class ProductView {
+	private JFrame mainFrame;
+	private JTable productViewTable;
+	private JButton insertButton;
+	private JButton updateButton;
+	private JButton deleteButton;
+	private JScrollPane scrollPane;
+
+	/**
+	 * Constructor.
+	 */
+	public ProductView() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		mainFrame = new JFrame();
+		mainFrame.setTitle("Products");
+		mainFrame.setBounds(100, 100, 320, 240);
+		mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(UIManager.getColor("Button.background"));
+		
+		JPanel panel_1 = new JPanel();
+		GroupLayout groupLayout = new GroupLayout(mainFrame.getContentPane());
+		groupLayout.setHorizontalGroup(
+			groupLayout.createParallelGroup(Alignment.LEADING)
+				.addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
+					.addContainerGap()
+					.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
+						.addComponent(panel, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 284, Short.MAX_VALUE)
+						.addComponent(panel_1, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 284, Short.MAX_VALUE))
+					.addContainerGap())
+		);
+		groupLayout.setVerticalGroup(
+			groupLayout.createParallelGroup(Alignment.LEADING)
+				.addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
+					.addContainerGap()
+					.addComponent(panel, GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addComponent(panel_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+		);
+		panel_1.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+		
+		insertButton = new JButton("Insert");
+		panel_1.add(insertButton);
+		
+		updateButton = new JButton("Update");
+		panel_1.add(updateButton);
+		
+		deleteButton = new JButton("Delete");
+		panel_1.add(deleteButton);
+		
+		scrollPane = new JScrollPane();
+		GroupLayout gl_panel = new GroupLayout(panel);
+		gl_panel.setHorizontalGroup(
+			gl_panel.createParallelGroup(Alignment.LEADING)
+				.addComponent(scrollPane, GroupLayout.DEFAULT_SIZE, 284, Short.MAX_VALUE)
+		);
+		gl_panel.setVerticalGroup(
+			gl_panel.createParallelGroup(Alignment.LEADING)
+				.addComponent(scrollPane, GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
+		);
+		panel.setLayout(gl_panel);
+		mainFrame.getContentPane().setLayout(groupLayout);	
+	}
+
+	//Getters.
+	public JFrame getFrmProducts() {
+		return mainFrame;
+	}
+
+	public JTable getProductViewTable() {
+		return productViewTable;
+	}
+
+	public JButton getInsertButton() {
+		return insertButton;
+	}
+
+	public JButton getUpdateButton() {
+		return updateButton;
+	}
+
+	public JButton getDeleteButton() {
+		return deleteButton;
+	}
+
+	//Setters.
+	public void setFrmProducts(JFrame frmProducts) {
+		this.mainFrame = frmProducts;
+	}
+
+	public void setProductViewTable(JTable productViewTable) {
+		this.productViewTable = productViewTable;
+	}
+
+	public void setInsertButton(JButton insertButton) {
+		this.insertButton = insertButton;
+	}
+
+	public void setUpdateButton(JButton updateButton) {
+		this.updateButton = updateButton;
+	}
+
+	public void setDeleteButton(JButton deleteButton) {
+		this.deleteButton = deleteButton;
+	}
+	
+	/**
+	 * Constructs the table that holds the product list.
+	 * <br>This method is needed by the controller class to construct a JTable object
+	 * with the correct number of rows from the database.
+	 * @param numberOfRows int
+	 */
+	public void createTable(int numberOfRows){
+		String[] columnHead = {"ID", "Product"};
+		TableModel tModel = new DefaultTableModel(columnHead,numberOfRows);
+		productViewTable = new JTable(tModel);
+		productViewTable.getColumnModel().getColumn(0).setMinWidth(40);
+		productViewTable.getColumnModel().getColumn(0).setMaxWidth(40);
+		scrollPane.setViewportView(productViewTable);
+		productViewTable.getColumnModel().getColumn(0).setMinWidth(40);
+		productViewTable.getColumnModel().getColumn(0).setMaxWidth(40);
+		scrollPane.setViewportView(productViewTable);
+	}//end createTable
+	
+	/**
+	 * Make the frame visible.
+	 */
+	public void showGUI(){
+		this.mainFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		this.mainFrame.pack();
+		this.mainFrame.setLocationRelativeTo(null);
+		this.mainFrame.setExtendedState(java.awt.Frame.MAXIMIZED_BOTH);
+		this.mainFrame.setVisible(true);
+	}//end showGUI().	
+	
+}

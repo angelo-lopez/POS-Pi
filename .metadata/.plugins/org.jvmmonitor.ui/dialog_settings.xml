@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="OverviewSectionTreeExpansionState9044">
+		<item value="false" key="Runtime"/>
+		<item value="false" key="Class loading"/>
+		<item value="false" key="Compilation"/>
+		<item value="false" key="Memory"/>
+		<item value="false" key="Garbage collector"/>
+		<item value="false" key="Operating system"/>
+		<item value="false" key="Thread"/>
+	</section>
+	<section name="OverviewSectionTreeExpansionState7336">
+		<item value="false" key="Runtime"/>
+		<item value="false" key="Class loading"/>
+		<item value="false" key="Compilation"/>
+		<item value="true" key="Memory"/>
+		<item value="false" key="Garbage collector"/>
+		<item value="false" key="Operating system"/>
+		<item value="false" key="Thread"/>
+	</section>
+	<section name="OverviewSectionTreeExpansionState6168">
+		<item value="false" key="Runtime"/>
+		<item value="false" key="Class loading"/>
+		<item value="false" key="Compilation"/>
+		<item value="true" key="Memory"/>
+		<item value="false" key="Garbage collector"/>
+		<item value="false" key="Operating system"/>
+		<item value="false" key="Thread"/>
+	</section>
+	<section name="OverviewSectionTreeExpansionState8620">
+		<item value="false" key="Runtime"/>
+		<item value="false" key="Class loading"/>
+		<item value="false" key="Compilation"/>
+		<item value="false" key="Memory"/>
+		<item value="false" key="Garbage collector"/>
+		<item value="false" key="Operating system"/>
+		<item value="false" key="Thread"/>
+	</section>
+	<section name="OverviewSectionTreeExpansionState6452">
+		<item value="false" key="Runtime"/>
+		<item value="false" key="Class loading"/>
+		<item value="false" key="Compilation"/>
+		<item value="true" key="Memory"/>
+		<item value="false" key="Garbage collector"/>
+		<item value="false" key="Operating system"/>
+		<item value="false" key="Thread"/>
+	</section>
+	<section name="OverviewSectionTreeExpansionState6660">
+		<item value="false" key="Runtime"/>
+		<item value="false" key="Class loading"/>
+		<item value="false" key="Compilation"/>
+		<item value="true" key="Memory"/>
+		<item value="false" key="Garbage collector"/>
+		<item value="false" key="Operating system"/>
+		<item value="false" key="Thread"/>
+	</section>
+	<section name="ToggleOrientationAction">
+	</section>
+	<section name="OverviewSectionTreeExpansionState9844">
+		<item value="false" key="Runtime"/>
+		<item value="false" key="Class loading"/>
+		<item value="false" key="Compilation"/>
+		<item value="true" key="Memory"/>
+		<item value="false" key="Garbage collector"/>
+		<item value="false" key="Operating system"/>
+		<item value="false" key="Thread"/>
+	</section>
+	<section name="org.jvmmonitor.internal.ui.properties.cpu.CpuSection">
+		<item value="SAMPLING" key="org.jvmmonitor.ui.profilerType"/>
+		<item value="50" key="org.jvmmonitor.ui.profilerSampingPeriod"/>
+		<item value="pospi" key="org.jvmmonitor.ui.packages"/>
+	</section>
+	<section name="OverviewSectionTreeExpansionState8072">
+		<item value="false" key="Runtime"/>
+		<item value="false" key="Class loading"/>
+		<item value="false" key="Compilation"/>
+		<item value="true" key="Memory"/>
+		<item value="false" key="Garbage collector"/>
+		<item value="false" key="Operating system"/>
+		<item value="false" key="Thread"/>
+	</section>
+</section>
