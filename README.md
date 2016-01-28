@@ -1,4 +1,4 @@
-# POS-Pi
+# POS-Pi (Working Prototype)
 Author: Angelo Romel Lopez<br/>
 Subject: HND Software Development Yr.2 - Graded Unit Project (2014-2015)<br/><br/>
 POS-Pi (Portable Point-of-Sale Application on a Raspberry Pi)<br/><br/>
